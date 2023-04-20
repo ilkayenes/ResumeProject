@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="en">
+
+@Html.Action("PartialHeader", "Default");
+
+<body>
+
+
+
+    @Html.Action("PartialNavbar", "Default") <!-- Navbar ve footer birlikte çalışıyor-->
+
+    @RenderBody()
+
+
+    @Html.Action("PartialFooter", "Default")<!-- Burda partial olarak tanımlamadık sayfayı açarken partial değil zaten burası bitti onlar default klasörünün içinde yanına default yazınca partialı burdan çekiyoruz-->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+    </button>
+    @Html.Action("PartialScripts", "Default");
+</body>
+
+</html>

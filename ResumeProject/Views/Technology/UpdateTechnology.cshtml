@@ -1,0 +1,26 @@
+﻿@model ResumeProject.Models.Tbl_Technology
+@{
+    ViewBag.Title = "UpdateTechnology";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>UpdateTechnology</h2>
+
+<form method="post">
+
+  
+    @Html.HiddenFor(x => x.TechnologyID, new { @class = "form-control" })
+    <br />
+
+
+    <label>New Technology</label>
+    @Html.TextBoxFor(x => x.TechnologyTitle, new { @class = "form-control" })
+    <br />
+
+    <label>New Value</label>
+    @Html.TextBoxFor(x => x.TechnologyValue, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-outline-secondary">Add New Values</button>
+
+</form>

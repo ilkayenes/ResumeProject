@@ -1,0 +1,34 @@
+﻿@model  List<ResumeProject.Models.Tbl_Technology>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Technologys</h2>
+
+<table class="table table-bordered">
+    <tr>
+
+        <th>#</th>
+        <th>TechnologyTitle</th>
+        <th>TechnologyValue</th>
+        <th>Delete Technology</th>
+        <th>Update Technology</th>
+
+    </tr>
+
+
+    @foreach (var item in Model) 
+    {
+    <tr>
+        <td>@item.TechnologyID</td>
+        <td>@item.TechnologyTitle</td>
+        <td>@item.TechnologyValue</td>
+        <td><a href="/Technology/DeleteTechnology/@item.TechnologyID" class="btn btn-outline-danger">Delete </a></td>
+        <td><a href="/Technology/UpdateTechnology/@item.TechnologyID" class="btn btn-outline-success">Update</a></td>
+    </tr>
+    
+    }
+</table>
+
+<a href="/Technology/AddTechnology/" class="btn btn-outline-primary">Add New Technology</a>

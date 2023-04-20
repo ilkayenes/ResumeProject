@@ -1,0 +1,35 @@
+﻿@model List<ResumeProject.Models.Tbl_Technology>
+
+
+
+<section class="w3l-skills py-5" id="skills">
+    <div class="container py-lg-5 py-md-4 py-3">
+        <div class="row">
+            <div class="col-lg-6 pe-lg-5">
+                <img src="~/Content/starter/assets/images/s.png" alt="" class="img-fluid">
+            </div>
+
+          
+            <div class="col-lg-6 mt-lg-0 mt-5 w3l-content-6 px-lg-4 align-self-center">
+                
+                <h3 class="w3l-title-main">Kullandığım Programlama Dilleri</h3>
+                <p class="mt-4">
+                    Asp.Net Core Ağırlıklı Olarak Kullandığım Programlama Dilleri 
+                </p>
+                @foreach (var item in Model)
+                {
+                    <div class="progress-info mt-5">
+                        <h6 class="progress-tittle">@item.TechnologyTitle</h6>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped" role="progressbar" style="width: @item.TechnologyValue%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                            </div>
+                        </div>
+                    </div>
+                }
+                </div>
+           
+
+
+        </div>
+    </div>
+</section>

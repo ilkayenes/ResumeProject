@@ -1,0 +1,28 @@
+﻿@model ResumeProject.Models.Tbl_Skill
+@{
+    ViewBag.Title = "UpdateSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>UpdateSkill</h2>
+
+<form method="post">
+
+    <label>SkillID</label>
+    @Html.HiddenFor(x => x.SkillID, new { @class = "form-control" })
+
+    <label>New Skill Title</label>
+    @Html.TextBoxFor(x =>x.SkillTitle, new { @class = "form-control" })
+
+    <label>New Skill Description</label>
+    @Html.TextBoxFor(x => x.SkillDescription, new { @class = "form-control" })
+
+    <label>New Skill Icon</label>
+    @Html.TextBoxFor(x =>x.Skillicon, new { @class = "form-control" })
+    <br />
+
+
+    <button class="btn btn-outline-secondary">Update the data</button>
+
+
+</form>

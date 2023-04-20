@@ -1,0 +1,41 @@
+﻿@using ResumeProject.Models
+@model List<Tbl_Skill>
+
+<section class="w3l-whychooseus pt-5" id="about1">
+    <div class="container pt-lg-0 pt-md-4 pt-2">
+        <div class="row align-items-center">
+            <div class="col-lg-7 pe-lg-5 align-items-center">
+                <div class="row two-grids">
+                    <h2>Yetenekler'im</h2>
+                    @foreach (var item in Model)
+                    {
+
+                        <div class="col-sm-6 grids_info d-flex">
+                            <i class="@item.Skillicon"></i>
+                            <div class="detail ms-3">
+                                <h4 class="w3l-subtitle">@item.SkillTitle</h4>
+                                <p>
+                                    @item.SkillDescription
+                                </p>
+                            </div>
+
+                        </div>
+                    }
+                </div>
+            </div>
+                <div style="margin-top:-30px;" class="col-lg-5 ps-lg-5 my-image mt-lg-0 mt-4">
+                    <img src="~/Content/starter/assets/images/downloada.png" alt="">
+                </div>
+            
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+﻿@model List<ResumeProject.Models.Tbl_Project>
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Project</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Project Title</th>
+        <th>Project Description</th>
+        <th>Project Image Url</th>
+        <th>Delete the Project</th>
+        <th>Update the Project</th>
+    </tr>
+
+    @foreach (var item in Model)
+    { 
+    <tr>
+        <td> @item.ProjectID</td>
+        <td>@item.ProjectTitle</td>
+        <td>@item.ProjectDescription</td>
+        <td>@item.ProjectImageUrl</td>
+        <td><a href="/Project/DeleteProject/@item.ProjectID"class="btn btn-danger">Delete the Project</a></td>
+        <td><a href="/Project/UpdateProject/@item.ProjectID"class="btn btn-success">Update the Project</a></td>
+    </tr>
+    
+    }
+    
+</table>
+<a href="/Project/AddProject/" class="btn btn-primary">Add New Technology</a>

@@ -1,0 +1,50 @@
+﻿@model List<ResumeProject.Models.Tbl_Profile>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Profile</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>ProfileTitle</th>
+        <th>ProfileDescription</th>
+        <th>Name</th>
+        <th>Mail</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>SocialMedia1</th>
+        <th>SocialMedia2</th>
+        <th>SocialMedia3</th>
+        <th>Delete Profile</th>
+        <th>Update Profile</th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    { 
+    <tr>
+        <td>@item.ProfileID</td>
+        <td>@item.ProfileTitle</td>
+        <td>@item.ProfileDescription</td>
+        <td>@item.Name</td>
+        <td>@item.Mail</td>
+        <td>@item.Address</td>
+        <td>@item.Phone</td>
+        <td>@item.SocialMedia1</td>
+        <td>@item.SocialMedia2</td>
+        <td>@item.SocialMedia3</td>
+        <td><a href="/Profile/DeleteProfile/@item.ProfileID" class="btn btn-outline-danger">Delete</a></td>
+        <td><a href="/Profile/UpdateProfile/@item.ProfileID" class="btn btn-outline-success">Update</a></td>
+        
+
+    </tr>
+    
+    }
+
+</table>
+<a href="/Profile/AddProfile/" class="btn btn-outline-primary">Add New Profile</a>
+
+
